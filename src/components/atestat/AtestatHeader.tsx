@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 
@@ -29,10 +30,14 @@ export default function AtestatHeader({ lang }: { lang: string }) {
                 }`}
         >
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-                <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-xl tracking-tight">
-                    <span className="font-extrabold tracking-wider">
-                        REDVEST SYSTEM
-                    </span>
+                <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-xl tracking-tight relative w-32 h-10 md:w-40 md:h-12">
+                    <Image
+                        src="/redvest-logo.png"
+                        alt="Redvest System"
+                        fill
+                        className="object-contain object-left"
+                        priority
+                    />
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
