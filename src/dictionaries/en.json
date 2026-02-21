@@ -1,0 +1,38 @@
+{
+    "hero": {
+        "usp": "Industrial Safety Certificate in Kazakhstan turnkey for only 500,000 KZT",
+        "formTitle": "Leave a Request",
+        "namePlaceholder": "Your Name",
+        "emailPlaceholder": "E-mail",
+        "phonePlaceholder": "Phone",
+        "submitBtn": "Submit Request"
+    },
+    "nav": {
+        "services": "Our Services",
+        "about": "About Us"
+    },
+    "process": {
+        "title": "Certificate Obtaining Process",
+        "step1": "Leave a request",
+        "step2": "Sign a contract",
+        "step3": "Conduct expertise",
+        "step4": "Submit documents (to MIID RK)",
+        "step5": "Receive Certificate"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What is the validity period of the document?",
+        "a1": "The certificate is valid for 5 years.",
+        "q2": "Which authority issues the document?",
+        "a2": "The document is issued by the Industrial Development Committee of MIID RK."
+    },
+    "partners": {
+        "title": "Our Partners",
+        "applyBtn": "Apply Now"
+    },
+    "formMessages": {
+        "success": "Request successfully sent!",
+        "error": "Error sending request. Please try again.",
+        "invalidPhone": "Enter a valid phone number"
+    }
+}
