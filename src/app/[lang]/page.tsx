@@ -1,36 +1,40 @@
+import AtestatHeader from '@/components/atestat/AtestatHeader'
+import HeroSection from '@/components/atestat/HeroSection'
+import AboutSection from '@/components/atestat/AboutSection'
+import ServicesSection from '@/components/atestat/ServicesSection'
+import ProjectsSection from '@/components/atestat/ProjectsSection'
+import SocialProofSection from '@/components/atestat/SocialProofSection'
+import QuizForm from '@/components/atestat/QuizForm'
+import Footer from '@/components/Footer' // we can reuse the generic footer
 import { getDictionary, Locale } from '@/get-dictionary'
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import Process from '@/components/Process'
-import FAQ from '@/components/FAQ'
-import Partners from '@/components/Partners'
-import Footer from '@/components/Footer'
-import FloatingWidget from '@/components/FloatingWidget'
 
-export default async function Home({
-  params,
+export default async function AtestatPage({
+    params,
 }: {
-  params: Promise<{ lang: string }>
+    params: Promise<{ lang: string }>
 }) {
-  const { lang } = await params
-  const locale = (lang === 'ru' || lang === 'en') ? (lang as Locale) : 'ru'
-  const dict = await getDictionary(locale)
+    const { lang } = await params
+    const locale = (lang === 'ru' || lang === 'en') ? (lang as Locale) : 'ru'
+    const dict = await getDictionary(locale)
 
-  return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <Header lang={locale} dict={dict} />
-      <main>
-        <Hero lang={locale} dict={dict} />
-        <Process lang={locale} dict={dict} />
-        <FAQ lang={locale} dict={dict} />
-        <Partners lang={locale} dict={dict} />
-      </main>
-      <Footer lang={locale} dict={dict} />
-      <FloatingWidget dict={dict} />
-    </div>
-  )
+    return (
+        <div className="min-h-screen font-[family-name:var(--font-geist-sans)] selection:bg-orange-500/30">
+            <AtestatHeader lang={locale} />
+
+            <main>
+                <HeroSection />
+                <AboutSection />
+                <ServicesSection />
+                <ProjectsSection />
+                <SocialProofSection />
+                <QuizForm />
+            </main>
+
+            <Footer lang={locale} dict={dict} />
+        </div>
+    )
 }
 
 export async function generateStaticParams() {
-  return [{ lang: 'ru' }, { lang: 'en' }]
+    return [{ lang: 'ru' }, { lang: 'en' }]
 }

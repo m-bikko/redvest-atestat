@@ -6,11 +6,11 @@ import Image from 'next/image'
 const projects = [
     {
         title: "НПЗ Атырау — Ежегодный аудит",
-        image: "https://images.unsplash.com/photo-1542282811-943ef1a647ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
         title: "ТЭЦ-2 Алматы — Экспертиза котлов",
-        image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        image: "https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
         title: "Казцинк — Обучение персонала",
@@ -18,7 +18,7 @@ const projects = [
     },
     {
         title: "ТШО Тенгиз — Тех. обслуживание",
-        image: "https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
 ]
 
@@ -47,6 +47,7 @@ export default function ProjectsSection() {
                                 src={project.image}
                                 alt={project.title}
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-105 transition-all duration-700 ease-in-out"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>

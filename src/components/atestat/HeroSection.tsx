@@ -4,15 +4,20 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
+import InteractiveDots from './InteractiveDots'
+
 export default function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50">
-            {/* Abstract light high-tech background */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent"></div>
+            {/* Interactive dot grid background */}
+            <div className="absolute inset-0 z-0 opacity-60">
+                <InteractiveDots />
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent z-[1] pointer-events-none"></div>
 
             {/* Radial gradient purely for a soft highlight */}
-            <div className="absolute inset-0 flex items-center justify-center bg-slate-50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="absolute inset-0 flex items-center justify-center bg-slate-50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-[1] pointer-events-none"></div>
 
             <div className="container relative z-10 px-4 md:px-8 mx-auto text-center">
                 <motion.div

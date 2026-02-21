@@ -24,7 +24,7 @@ export default function AtestatHeader({ lang }: { lang: string }) {
                 }`}
         >
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-                <Link href={`/${lang}/atestat`} className="flex items-center gap-2 font-bold text-xl tracking-tight">
+                <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-xl tracking-tight">
                     <span className="font-extrabold tracking-wider">
                         REDVEST SYSTEM
                     </span>
