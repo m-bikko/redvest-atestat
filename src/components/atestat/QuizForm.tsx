@@ -123,8 +123,8 @@ export default function QuizForm() {
                                                 key={i}
                                                 onClick={() => handleOptionSelect(questions[step].id, option)}
                                                 className={`text-left p-6 rounded-xl border-2 transition-all ${answers[questions[step].id] === option
-                                                        ? 'border-orange-500 bg-orange-50 text-orange-900'
-                                                        : 'border-slate-100 hover:border-orange-200 hover:bg-slate-50'
+                                                    ? 'border-orange-500 bg-orange-50 text-orange-900'
+                                                    : 'border-slate-100 hover:border-orange-200 hover:bg-slate-50'
                                                     }`}
                                             >
                                                 <span className="font-medium">{option}</span>
@@ -163,7 +163,7 @@ export default function QuizForm() {
                                                     required
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                                    placeholder="+7 (700) 000-00-00"
+                                                    placeholder="+7 700 101 06 60"
                                                     className="h-12"
                                                 />
                                             </div>
@@ -178,11 +178,11 @@ export default function QuizForm() {
                                                 className="h-12"
                                             />
                                         </div>
-                                        <div className="flex justify-between items-center pt-4">
-                                            <Button type="button" variant="ghost" onClick={() => setStep(step - 1)}>
+                                        <div className="flex flex-col-reverse sm:flex-row justify-between items-center pt-4 gap-4">
+                                            <Button type="button" variant="ghost" className="w-full sm:w-auto h-12" onClick={() => setStep(step - 1)}>
                                                 Назад
                                             </Button>
-                                            <Button type="submit" size="lg" disabled={isSubmitting} className="bg-orange-600 hover:bg-orange-700 h-12 px-8">
+                                            <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 h-12 px-8">
                                                 {isSubmitting ? 'Отправка...' : 'Получить расчет'}
                                             </Button>
                                         </div>

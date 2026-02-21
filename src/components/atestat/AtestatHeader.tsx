@@ -1,17 +1,22 @@
 'use client'
 
 import Link from 'next/link'
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { Menu, X } from 'lucide-react'
 
 export default function AtestatHeader({ lang }: { lang: string }) {
     const { scrollY } = useScroll()
     const [isScrolled, setIsScrolled] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 50)
     })
+
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
+    const closeMobileMenu = () => setIsMobileMenuOpen(false)
 
     return (
         <motion.header
@@ -31,27 +36,70 @@ export default function AtestatHeader({ lang }: { lang: string }) {
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <Link href="#about" className="hover:text-orange-600 transition-colors">
+                    <a href="#about" className="hover:text-orange-600 transition-colors">
                         О компании
-                    </Link>
-                    <Link href="#services" className="hover:text-orange-600 transition-colors">
+                    </a>
+                    <a href="#services" className="hover:text-orange-600 transition-colors">
                         Услуги
-                    </Link>
-                    <Link href="#projects" className="hover:text-orange-600 transition-colors">
+                    </a>
+                    <a href="#projects" className="hover:text-orange-600 transition-colors">
                         Кейсы
-                    </Link>
+                    </a>
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <Button
-                        variant={isScrolled ? 'outline' : 'outline'}
-                        className={isScrolled ? '' : 'border-slate-900/20 text-slate-900 hover:bg-slate-900 hover:text-white'}
-                        asChild
+                    <div className="hidden md:block">
+                        <Button
+                            variant={isScrolled ? 'outline' : 'outline'}
+                            className={isScrolled ? '' : 'border-slate-900/20 text-slate-900 hover:bg-slate-900 hover:text-white'}
+                            asChild
+                        >
+                            <a href="#contact">Связаться с нами</a>
+                        </Button>
+                    </div>
+
+                    <button
+                        className="md:hidden p-2 text-slate-900 focus:outline-none"
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle mobile menu"
                     >
-                        <Link href="#contact">Связаться с нами</Link>
-                    </Button>
+                        {isMobileMenuOpen ? <X size={28} className={isScrolled ? 'text-slate-900' : 'text-slate-900'} /> : <Menu size={28} className={isScrolled ? 'text-slate-900' : 'text-slate-900'} />}
+                    </button>
                 </div>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden bg-white border-b border-border overflow-hidden"
+                    >
+                        <nav className="flex flex-col px-4 py-8 space-y-6 text-center">
+                            <a href="#about" onClick={closeMobileMenu} className="text-xl font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                                О компании
+                            </a>
+                            <a href="#services" onClick={closeMobileMenu} className="text-xl font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                                Услуги
+                            </a>
+                            <a href="#projects" onClick={closeMobileMenu} className="text-xl font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                                Кейсы
+                            </a>
+                            <div className="pt-4 flex justify-center">
+                                <Button
+                                    className="w-full max-w-xs bg-orange-600 hover:bg-orange-700 text-white h-12"
+                                    onClick={closeMobileMenu}
+                                    asChild
+                                >
+                                    <a href="#contact">Связаться с нами</a>
+                                </Button>
+                            </div>
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.header>
     )
 }

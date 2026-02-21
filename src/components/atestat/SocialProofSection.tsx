@@ -43,27 +43,29 @@ export default function SocialProofSection() {
                             "{testimonials[currentIndex].quote}"
                         </blockquote>
 
-                        <div className="flex items-end justify-between border-t border-slate-800 pt-8">
-                            <div className="flex items-center gap-6">
-                                <div className="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center text-2xl text-slate-400 font-bold">
+                        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-t border-slate-800 pt-8 gap-8 sm:gap-4">
+                            <div className="flex items-center gap-4 sm:gap-6">
+                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-slate-800 flex items-center justify-center text-xl sm:text-2xl text-slate-400 font-bold shrink-0">
                                     {testimonials[currentIndex].avatar}
                                 </div>
                                 <div>
-                                    <div className="text-xl font-bold text-white">{testimonials[currentIndex].author}</div>
-                                    <div className="text-slate-400">{testimonials[currentIndex].role}</div>
+                                    <div className="text-lg sm:text-xl font-bold text-white leading-tight mb-1">{testimonials[currentIndex].author}</div>
+                                    <div className="text-slate-400 text-sm sm:text-base leading-tight">{testimonials[currentIndex].role}</div>
                                 </div>
                             </div>
 
-                            <div className="flex gap-4">
+                            <div className="flex gap-4 self-start sm:self-auto">
                                 <button
                                     onClick={prev}
                                     className="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-colors"
+                                    aria-label="Previous testimonial"
                                 >
                                     <ArrowLeft className="w-5 h-5" />
                                 </button>
                                 <button
                                     onClick={next}
                                     className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-slate-900 hover:bg-slate-200 transition-colors"
+                                    aria-label="Next testimonial"
                                 >
                                     <ArrowRight className="w-5 h-5" />
                                 </button>

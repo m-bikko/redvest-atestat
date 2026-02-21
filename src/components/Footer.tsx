@@ -18,10 +18,9 @@ export default function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="bg-white p-8 md:p-12 rounded-3xl border border-border shadow-2xl shadow-primary/5 max-w-lg w-full relative group"
+                        className="bg-white p-8 md:p-10 rounded-[2rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] max-w-lg w-full relative group"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none" />
-                        <h2 className="text-3xl font-bold mb-8 text-foreground tracking-tight">
+                        <h2 className="text-2xl font-bold mb-6 text-slate-900 tracking-tight">
                             {dict.hero.formTitle}
                         </h2>
                         <ContactForm dict={dict} />
@@ -38,18 +37,18 @@ export default function Footer({ lang, dict }: { lang: Locale, dict: any }) {
                         <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
                             Свяжитесь с нами
                         </h2>
-                        <div className="flex flex-col gap-8 text-lg md:text-xl font-medium text-muted-foreground">
-                            <a href="tel:+77000000000" className="flex items-center gap-6 hover:text-primary transition-all duration-300 group">
-                                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
-                                    <Phone className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
+                        <div className="flex flex-col gap-6 text-lg md:text-xl font-medium text-slate-600 mt-4">
+                            <a href="tel:+77001010660" className="flex items-center gap-6 hover:text-primary transition-all duration-300 group">
+                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center transition-colors duration-300">
+                                    <Phone className="w-6 h-6 text-primary" />
                                 </div>
-                                <span className="text-2xl font-semibold tracking-wide">+7 (700) 000-00-00</span>
+                                <span className="text-xl font-semibold tracking-wide">+7 700 101 06 60</span>
                             </a>
-                            <a href="mailto:info@redvest.kz" className="flex items-center gap-6 hover:text-primary transition-all duration-300 group">
-                                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
-                                    <Mail className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
+                            <a href="mailto:is@redvest.kz" className="flex items-center gap-6 hover:text-primary transition-all duration-300 group">
+                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center transition-colors duration-300">
+                                    <Mail className="w-6 h-6 text-primary" />
                                 </div>
-                                <span className="text-2xl font-semibold tracking-wide">info@redvest.kz</span>
+                                <span className="text-xl font-semibold tracking-wide">is@redvest.kz</span>
                             </a>
                         </div>
                     </motion.div>

@@ -5,19 +5,19 @@ import Image from 'next/image'
 
 const projects = [
     {
-        title: "НПЗ Атырау — Ежегодный аудит",
+        title: "НПЗ Атырау - Ежегодный аудит",
         image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
-        title: "ТЭЦ-2 Алматы — Экспертиза котлов",
+        title: "ТЭЦ-2 Алматы - Экспертиза котлов",
         image: "https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
-        title: "Казцинк — Обучение персонала",
+        title: "Казцинк - Обучение персонала",
         image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
-        title: "ТШО Тенгиз — Тех. обслуживание",
+        title: "ТШО Тенгиз - Тех. обслуживание",
         image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
 ]

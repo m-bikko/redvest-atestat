@@ -20,8 +20,8 @@ export default function Header({ lang, dict }: { lang: any, dict: any }) {
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-background/90 backdrop-blur-lg shadow-sm border-b border-border py-2'
-                    : 'bg-transparent py-4'
+                ? 'bg-background/90 backdrop-blur-lg shadow-sm border-b border-border py-2'
+                : 'bg-transparent py-4'
                 }`}
         >
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -45,7 +45,7 @@ export default function Header({ lang, dict }: { lang: any, dict: any }) {
 
                 <div className={`flex items-center gap-4 transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-md'}`}>
                     <div className="hidden md:block text-sm font-bold tracking-wide select-all">
-                        info@redvest.kz
+                        is@redvest.kz
                     </div>
                     <div className={`${isScrolled ? 'bg-muted/50' : 'bg-white/20 backdrop-blur-sm'} rounded-md p-0.5`}>
                         <LanguageSwitcher currentLang={lang} isDark={!isScrolled} />
