@@ -28,7 +28,7 @@ export default function Process({ lang, dict }: { lang: Locale, dict: any }) {
     }
 
     return (
-        <section id="process" className="py-24 bg-muted/40 relative overflow-hidden">
+        <section id="process" className="py-18 bg-muted/40 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 

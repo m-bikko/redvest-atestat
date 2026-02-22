@@ -10,16 +10,16 @@ export default function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50">
             {/* Interactive dot grid background */}
-            <div className="absolute inset-0 z-0 opacity-60">
+            <div className="absolute inset-0 z-[1] pointer-events-none">
                 <InteractiveDots />
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent z-[1] pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent z-[2] pointer-events-none"></div>
 
             {/* Radial gradient purely for a soft highlight */}
-            <div className="absolute inset-0 flex items-center justify-center bg-slate-50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-[1] pointer-events-none"></div>
+            <div className="absolute inset-0 flex items-center justify-center bg-slate-50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-[2] pointer-events-none"></div>
 
-            <div className="container relative z-10 px-4 md:px-8 mx-auto text-center">
+            <div className="container relative z-10 px-4 md:px-8 mx-auto text-center pointer-events-none">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -52,10 +52,10 @@ export default function HeroSection() {
                         transition={{ delay: 0.6, duration: 0.8 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
                     >
-                        <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white w-full sm:w-auto h-14 px-8 text-lg shadow-lg shadow-orange-600/20" asChild>
+                        <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white w-full sm:w-auto h-14 px-8 text-lg shadow-lg shadow-orange-600/20 pointer-events-auto" asChild>
                             <Link href="#contact">Получить консультацию</Link>
                         </Button>
-                        <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg" asChild>
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg pointer-events-auto" asChild>
                             <Link href="#services">Подробнее об услугах</Link>
                         </Button>
                     </motion.div>

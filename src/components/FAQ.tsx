@@ -16,7 +16,7 @@ export default function FAQ({ lang, dict }: { lang: Locale, dict: any }) {
     ]
 
     return (
-        <section id="faq" className="py-24 bg-white relative">
+        <section id="faq" className="py-18 bg-white relative">
             <div className="container mx-auto px-4 md:px-8 max-w-3xl relative z-10">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

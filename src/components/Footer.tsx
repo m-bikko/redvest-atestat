@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export default function Footer({ lang, dict }: { lang: Locale, dict: any }) {
     return (
-        <footer id="form" className="bg-white py-24 pb-12 relative overflow-hidden">
+        <footer id="form" className="bg-white py-18 pb-12 relative overflow-hidden">
             <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-8 relative z-10">

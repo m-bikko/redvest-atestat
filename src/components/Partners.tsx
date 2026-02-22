@@ -9,7 +9,7 @@ export default function Partners({ lang, dict }: { lang: Locale, dict: any }) {
     const partners = ['ZMS', 'Nabors', 'TCO', 'Aqua Drill', 'AGS', 'NCOC']
 
     return (
-        <section className="py-24 bg-muted/20 border-t border-b border-border/50 relative overflow-hidden">
+        <section className="py-18 bg-muted/20 border-t border-b border-border/50 relative overflow-hidden">
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
             <div className="container mx-auto px-4 md:px-8 text-center relative z-10">
                 <motion.h2

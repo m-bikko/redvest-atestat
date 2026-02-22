@@ -53,7 +53,7 @@ const itemVariants = {
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="py-24 bg-slate-50">
+        <section id="services" className="py-18 bg-slate-50">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">Наши услуги</h2>
@@ -72,13 +72,15 @@ export default function ServicesSection() {
                     {services.map((service, index) => (
                         <motion.div key={index} variants={itemVariants}>
                             <Card className="h-full p-8 border-none bg-[#faf9f6] shadow-sm hover:shadow-md transition-all duration-300">
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className={`w-14 h-14 rounded-2xl ${service.bg} flex items-center justify-center mb-6`}
-                                >
-                                    <service.icon className={`w-7 h-7 ${service.color}`} />
-                                </motion.div>
-                                <h3 className="text-2xl font-semibold mb-4 text-slate-800">{service.title}</h3>
+                                <div className="flex items-center justify-between gap-4 mb-6">
+                                    <h3 className="text-xl md:text-2xl font-semibold text-slate-800 leading-tight">{service.title}</h3>
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className={`shrink-0 w-14 h-14 rounded-2xl ${service.bg} flex items-center justify-center`}
+                                    >
+                                        <service.icon className={`w-7 h-7 ${service.color}`} />
+                                    </motion.div>
+                                </div>
                                 <p className="text-slate-600 leading-relaxed">
                                     {service.description}
                                 </p>

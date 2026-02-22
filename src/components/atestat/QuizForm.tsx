@@ -67,7 +67,7 @@ export default function QuizForm() {
     }
 
     return (
-        <section id="contact" className="py-24 bg-slate-50 relative overflow-hidden">
+        <section id="contact" className="py-18 bg-slate-50 relative overflow-hidden">
             <div className="absolute top-0 w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
             <div className="container mx-auto px-4 md:px-8">
 

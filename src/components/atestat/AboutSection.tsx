@@ -12,7 +12,7 @@ const stats = [
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-24 bg-white">
+        <section id="about" className="py-18 bg-white">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
                     <motion.div

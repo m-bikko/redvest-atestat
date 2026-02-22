@@ -38,7 +38,7 @@ export default function AtestatFAQ() {
     }
 
     return (
-        <section className="py-24 bg-[#F2F2F2] flex justify-center w-full">
+        <section className="py-18 bg-[#F2F2F2] flex justify-center w-full">
             <div className="w-full max-w-4xl bg-white flex flex-col shadow-sm">
                 {/* Title Element */}
                 <div className="flex justify-between items-center p-6 md:p-8 border-b border-gray-200">

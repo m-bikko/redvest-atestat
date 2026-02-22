@@ -22,12 +22,12 @@ export default function InteractiveDots() {
         let animationFrameId: number
         let dots: Dot[] = []
 
-        // Configuration
-        const dotSpacing = 24
-        const dotRadius = 1
-        const mouseRadius = 100
-        const mouseRepelForce = 3
-        const returnSpeed = 0.1
+        // Configuration - Adjusted for high visibility & reactivity
+        const dotSpacing = 20 // Closer together
+        const dotRadius = 1.5 // Slightly larger dots
+        const mouseRadius = 150 // Larger area of effect
+        const mouseRepelForce = 8 // Stronger push away
+        const returnSpeed = 0.05 // Slower return to create a "trailing" effect
 
         let mouse = {
             x: -1000,
@@ -66,7 +66,8 @@ export default function InteractiveDots() {
 
         const draw = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height)
-            ctx.fillStyle = 'rgba(255, 132, 0, 0.3)' // slate-500 with opacity
+            // Use a highly visible dark/slate color for the dots so they stand out against the light bg
+            ctx.fillStyle = 'rgba(132, 80, 48, 0.4)' // Tailwind slate-900 with 75% opacity
 
             dots.forEach(dot => {
                 // Calculate distance from mouse
@@ -98,6 +99,8 @@ export default function InteractiveDots() {
 
         const handleMouseMove = (e: MouseEvent) => {
             const rect = canvas.getBoundingClientRect()
+            // The canvas context is scaled by dpr, so we pass coordinates in CSS pixels.
+            // Do not multiply by dpr here, otherwise the mouse center will be offset.
             mouse.x = e.clientX - rect.left
             mouse.y = e.clientY - rect.top
         }

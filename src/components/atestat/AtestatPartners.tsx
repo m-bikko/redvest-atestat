@@ -12,7 +12,7 @@ export default function AtestatPartners() {
     }))
 
     return (
-        <section className="py-24 bg-white border-b border-slate-100">
+        <section className="py-18 bg-white border-b border-slate-100">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">Нам доверяют</h2>
@@ -21,7 +21,7 @@ export default function AtestatPartners() {
                     </p>
                 </div>
 
-                <div className="relative flex overflow-hidden group hover-pause border-y border-slate-50 py-8 bg-gradient-to-r from-white via-transparent to-white">
+                <div className="relative flex overflow-hidden group border-y border-slate-50 py-8 bg-gradient-to-r from-white via-transparent to-white">
                     {/* Left and Right Fade overlays for smoother entry/exit */}
                     <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 sm:w-1/4 bg-gradient-to-r from-white to-transparent z-10"></div>
                     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 sm:w-1/4 bg-gradient-to-l from-white to-transparent z-10"></div>

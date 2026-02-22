@@ -24,7 +24,7 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <section id="projects" className="py-24 bg-white">
+        <section id="projects" className="py-18 bg-white">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">Реализованные проекты</h2>
