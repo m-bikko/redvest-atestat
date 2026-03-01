@@ -32,7 +32,7 @@ export default function AtestatHeader({ lang }: { lang: string }) {
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
                 <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-xl tracking-tight relative w-32 h-10 md:w-40 md:h-12">
                     <Image
-                        src="/redvest-logo.png"
+                        src="/favicon.svg"
                         alt="Redvest System"
                         fill
                         className="object-contain object-left"

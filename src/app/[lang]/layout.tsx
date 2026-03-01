@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 export const metadata: Metadata = {
   title: 'Аттестат промбезопасности в Казахстане | Redvest Industrial Safety',
   description: 'Процесс получение Аттестата по промышленной безопасности в РК под ключ.',
+  icons: {
+    icon: '/favicon.svg'
+  }
 }
 
 export default async function RootLayout({
